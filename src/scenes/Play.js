@@ -122,8 +122,10 @@ class Play extends Phaser.Scene {
     }
 
     shipExplode(ship) {
+
         //temporarily hide ship
         ship.alpha = 0;
+
         //create exlposion at ship sprite location
         let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
         boom.anims.play('explode');
@@ -137,6 +139,6 @@ class Play extends Phaser.Scene {
         this.scoreLeft.text = this.p1Score;
 
         //play explosion audio
-        this.sound.play('sfx_explosion');
+        this.sound.play('sfx_explosion'); 
     }
 }
